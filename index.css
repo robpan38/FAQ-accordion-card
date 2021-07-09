@@ -149,8 +149,8 @@ hr {
     .container {
         min-height: 500px;
         max-height: 500px;
-        min-width: 400px;
-        max-width: 400px;
+        min-width: 300px;
+        max-width: 300px;
         flex-direction: column;
     }
 
@@ -174,21 +174,21 @@ hr {
     .pattern {
         height: 200px;
         width: 200px;
-        right: 27%;
+        right: 60px;
         top: -3000%;
     }
     
     .woman {
         height: 200px;
         width: 200px;
-        right: 27%;
+        right: 60px;
         top: -3000%;
     }
 
     .box {
         height: 50px;
         width: 50px;
-        right: 63%;
+        right: 200px;
         top: -1050%;
     }
 }
