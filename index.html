@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="./index.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <script>
+    const handleClick = (number) => {
+      const questionDiv = document.querySelector(`#no${number}`);
+      let answerDiv = questionDiv.nextElementSibling;
+      if (answerDiv.style.maxHeight === "") {
+        questionDiv.firstElementChild.style.fontWeight = "700";
+        answerDiv.style.maxHeight = `${answerDiv.scrollHeight}px`;
+        answerDiv.style.paddingTop = "1px";
+      }
+      else {
+        questionDiv.firstElementChild.style.fontWeight = "normal";
+        answerDiv.style.maxHeight = "";
+        answerDiv.style.paddingTop = "";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="images">
+      <div class="pattern"></div>
+      <div class="woman"></div>
+      <div class="box"></div>
+    </div>
+    <div class="questions">
+      <div class="title">FAQ</div>
+      <div class="question" id="no1" onclick="handleClick(1)">
+        <p>How many team members can I invite?</p>
+        <div class="icon"></div>
+      </div>
+      <div class="answer">You can invite up to 2 additional users on the Free plan. There is no limit on 
+        team members for the Premium plan.</div>
+      <hr>
+      <div class="question" id="no2" onclick="handleClick(2)">
+        <p>What is the maximum file upload size?</p>
+        <div class="icon"></div>
+      </div>
+      <div class="answer">No more than 2GB. All files in your account must fit your allotted storage space.</div>
+      <hr>
+      <div class="question" id="no3" onclick="handleClick(3)">
+        <p>How do I reset my password?</p>
+        <div class="icon"></div>
+      </div>
+      <div class="answer">Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.</div>
+      <hr>
+      <div class="question" id="no4" onclick="handleClick(4)">
+        <p>Can I cancel my subscription?</p>
+        <div class="icon"></div>
+      </div>
+      <div class="answer">Yes! Send us a message and we’ll process your request no questions asked.</div>
+      <hr>
+      <div class="question" id="no5" onclick="handleClick(5)">
+        <p>Do you provide additional support?</p>
+        <div class="icon"></div>
+      </div>
+      <div class="answer">Chat and email support is available 24/7. Phone lines are open during normal business hours.</div>
+      <hr>
+    </div>
+  </div>
+</body>
+</html>
